@@ -51,15 +51,17 @@ int main() {
     //
     Solution sol;
         vector<int> nums = {2,7,11,15};
-        int target = 9;
+        int target = 18;
+
         vector<int> res = sol.twoSum(nums, target);
         for (int i : res) {
             cout << i << " ";
         }
+
         cout << endl;
     return 0;
 }
-
+//2025.12.12
 
 /*
 // @lcpr case=start
