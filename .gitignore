@@ -1,0 +1,7 @@
+build/
+.vscode/
+*.dSYM
+*.o
+
+.gemini/
+gha-creds-*.json

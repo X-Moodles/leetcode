@@ -1,3 +1,10 @@
+// @lcpr-before-debug-begin
+
+
+
+
+// @lcpr-before-debug-end
+
 /*
  * @lc app=leetcode.cn id=1 lang=cpp
  * @lcpr version=30204
@@ -27,13 +34,34 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
+    
     vector<int> twoSum(vector<int>& nums, int target) {
-        
+        for (int i = 0; i < nums.size(); ++i) {
+            for (int j = i + 1; j < nums.size(); ++j) {
+                if (nums[i] + nums[j] == target) {
+                    return {i, j};
+                }
+            }
+        }
+        return {};
     }
 };
 // @lc code=end
+int main() {
+    //
+    Solution sol;
+        vector<int> nums = {2,7,11,15};
+        int target = 18;
 
+        vector<int> res = sol.twoSum(nums, target);
+        for (int i : res) {
+            cout << i << " ";
+        }
 
+        cout << endl;
+    return 0;
+}
+//2025.12.12
 
 /*
 // @lcpr case=start
