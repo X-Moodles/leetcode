@@ -1,18 +1,23 @@
-build/
-.vscode/
-*.dSYM
+# C++ Compiled Binaries
+*.exe
+*.out
 *.o
+*.obj
 
-.gemini/
-gha-creds-*.json
-# .gitattributes
-# 强制所有文本文件在提交时转换为 LF，检出时根据系统自动转换（或保持 LF）
-* text=auto
+# Build Directories
+build/
+output/
 
-# 对于 C++/C# 代码，强制使用 LF (即使在 Windows 上)
-*.cpp text eol=lf
-*.h   text eol=lf
-*.cs  text eol=lf
+# Editor/IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# 脚本文件必须是 LF，否则 Linux 下无法运行
-*.sh  text eol=lf
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# LeetCode Plugin Metadata
+# (Optional: You might want to keep these if you sync progress)
+# .lcpr_data/

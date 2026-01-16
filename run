@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ ! -f ./launcher ]; then
+    echo "[Setup] Compiling launcher for Linux..."
+    g++ -std=c++17 launcher.cpp -o launcher
+fi
+./launcher "$@"
