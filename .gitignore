@@ -21,3 +21,9 @@ Thumbs.db
 # LeetCode Plugin Metadata
 # (Optional: You might want to keep these if you sync progress)
 # .lcpr_data/
+
+# Gemini CLI
+.gemini-clipboard/
+
+# Local Config
+.env
