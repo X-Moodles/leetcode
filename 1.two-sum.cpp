@@ -1,8 +1,5 @@
 // @lcpr-before-debug-begin
 
-
-
-
 // @lcpr-before-debug-end
 
 /*
@@ -11,7 +8,6 @@
  *
  * [1] 两数之和
  */
-
 
 // @lcpr-template-start
 using namespace std;
@@ -33,46 +29,46 @@ using namespace std;
 // @lcpr-template-end
 // @lc code=start
 class Solution {
-public:
-   //暴力查找O(n^2) 
-    // vector<int> twoSum(vector<int>& nums, int target) {
-    //     for (int i = 0; i < nums.size(); ++i) {
-    //         for (int j = i + 1; j < nums.size(); ++j) {
-    //             if (nums[i] + nums[j] == target) {
-    //                 return {i, j};
-    //             }
-    //         }
-    //     }
-    //     return {};
-    // }
-        vector<int> twoSum(vector<int>& nums, int target) {
-            unordered_map<int, int> map;
-            for (int i = 0; i < nums.size(); i++){
-                int complement = target - nums[i];
-                if (map.find(target - nums[i]) != map.end()) {
-                    return {map[complement], i};
-                }
-                map[nums[i]] = i;
+   public:
+    // 暴力查找O(n^2)
+    //  vector<int> twoSum(vector<int>& nums, int target) {
+    //      for (int i = 0; i < nums.size(); ++i) {
+    //          for (int j = i + 1; j < nums.size(); ++j) {
+    //              if (nums[i] + nums[j] == target) {
+    //                  return {i, j};
+    //              }
+    //          }
+    //      }
+    //      return {};
+    //  }
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> map;
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i];
+            if (map.find(target - nums[i]) != map.end()) {
+                return {map[complement], i};
             }
-            return {};
+            map[nums[i]] = i;
         }
+        return {};
+    }
 };
 // @lc code=end
 int main() {
     //
     Solution sol;
-        vector<int> nums = {2,7,11,15};
-        int target = 18;
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 18;
 
-        vector<int> res = sol.twoSum(nums, target);
-        for (int i : res) {
-            cout << i << " ";
-        }
+    vector<int> res = sol.twoSum(nums, target);
+    for (int i : res) {
+        cout << i << " ";
+    }
 
-        cout << endl;
+    cout << endl;
     return 0;
 }
-//2025.12.12
+// 2025.12.12
 
 /*
 // @lcpr case=start
@@ -88,4 +84,3 @@ int main() {
 // @lcpr case=end
 
  */
-
